@@ -25,17 +25,9 @@ public class OnClickEvents : MonoBehaviour
     }
 
     public void QuitGame()
-{
-    // Show the exit dialog.
-    UnityEngine.Windows.SystemDialogs.ShowMessageBox("Do you want to exit the game?", "Exit Game", System.Windows.SystemDialogs.MessageBoxButton.YesNo, System.Windows.SystemDialogs.MessageBoxImage.Question);
-
-    if (UnityEngine.Windows.SystemDialogs.MessageBoxResult.Yes == UnityEngine.Windows.SystemDialogs.Result)
     {
-        // Exit the game.
         Application.Quit();
     }
-}
-
 
     public void PauseResumeGame()
     {

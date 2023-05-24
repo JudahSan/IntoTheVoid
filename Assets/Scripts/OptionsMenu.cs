@@ -17,13 +17,11 @@ public class OptionsMenu : MonoBehaviour
         bool value = isMuteToggle.isOn;
         if(value)
         {
-            AudioListener.volume = 0;
-
+            PlayerPrefs.SetInt("IsMute", 1);
         }
         else
         {
-            AudioListener.volume = 1;
+            PlayerPrefs.SetInt("IsMute", 0);
         }
-        PlayerPrefs.SetInt("IsMute", value ? 1 : 0);
     }
 }
