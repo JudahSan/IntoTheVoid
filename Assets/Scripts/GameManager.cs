@@ -60,6 +60,22 @@ public class GameManager : MonoBehaviour
         NEXT_LEVEL_UP_MARGIN = LEVEL_UP_MARGIN;
     }
 
+    public void OnPause()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            // Show the exit dialog.
+            UnityEngine.Windows.SystemDialogs.ShowMessageBox("Do you want to exit the game?", "Exit Game", System.Windows.SystemDialogs.MessageBoxButton.YesNo, System.Windows.SystemDialogs.MessageBoxImage.Question);
+        }
+    }
+
+    private void OnExitGame()
+    {
+        // Exit the game.
+        Application.Quit();
+    }
+
+
     public void UpdateScore(int score)
     {
         gameScore += score;
